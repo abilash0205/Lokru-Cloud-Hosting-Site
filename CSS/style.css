@@ -22,6 +22,11 @@ body{
     line-height: 1.6;
 }
 
+.hidden{
+    visibility: hidden;
+    height: 0;
+}
+
 /* NAVBAR */
 ul{
     list-style-type: none;
@@ -144,6 +149,11 @@ code, pre{
     padding: 40px;
     z-index: 100;
     justify-self: flex-end;
+    animation: slideInFromRight 1s ease-in;
+}
+
+.showcase-text{
+    animation: slideInFromLeft 1s ease-in;
 }
 
 .showcase-form .form-control{
@@ -181,6 +191,7 @@ code, pre{
 /* STATS */
 .stats{
     padding-top: 110px;
+    animation: slideInFromBottom 1s ease-in;
 }
 
 .stats-heading{
@@ -287,7 +298,47 @@ code, pre{
     margin: 0 10px;
 }
 
+/* ANIMATIONS */
+@keyframes slideInFromLeft {
+    0%{
+        transform: translateX(-100%);
+    }
 
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0%{
+        transform: translateY(-100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes slideInFromTop {
+    0%{
+        transform: translateY(100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
 
 /* Tablets and Under */
 @media(max-width:768px) {
@@ -309,11 +360,13 @@ code, pre{
     .showcase-text{
         text-align: center;
         margin-top: 40px;
+        animation: slideInFromTop 1s ease-in;
     }
 
     .showcase-form{
         justify-self: center;
         margin: auto;
+        animation: slideInFromBottom 1s ease-in;
     }
 
     .cli .grid > *:first-child{
