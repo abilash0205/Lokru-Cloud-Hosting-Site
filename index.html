@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lokru | Cloud Hosting for Everyone</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/utilities.css">
 </head>
@@ -25,7 +26,15 @@
     </div>
     
     <!-- Carousel -->
-    <section class="carousel container">
+    <section class="carousel container" id="carousel">
+        <div class="buttons">
+            <div class="move-button" onclick="prevSlide()">
+                <i class="fa fa-arrow-left"></i>
+            </div>
+            <div class="move-button" onclick="nextSlide()">
+                <i class="fa fa-arrow-right"></i>
+            </div>
+        </div>
             <div class="slider grid-2 m-3">
                 <img src="./Assets/Carousel Pics/New.png" alt="">
                 <div>
@@ -240,5 +249,7 @@ types with modern architecture and scaling.
             </div>
         </div>
     </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
